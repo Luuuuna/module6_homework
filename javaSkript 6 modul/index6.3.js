@@ -2,12 +2,10 @@
 которая также принимает число как аргумент и возвращает сумму этих двух чисел.
  Выведите в консоль результат.*/
 
-function getNum(x) {
-    return function (y) {
-      result = x + y;
-      console.log(result)
-    return result;
- }
- }
- getNum(7)(9);
- 
+ function getNum(x) {
+  return function sumNum(y) {
+    return x + y;
+  }
+}
+const sumN = getNum(5);
+console.log ( sumN(5) );
